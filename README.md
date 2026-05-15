@@ -1,6 +1,6 @@
 # Daily Telegram Boost
 
-GitHub Actions sends one Traditional Chinese encouragement message to Telegram every day at 09:00 Asia/Taipei.
+GitHub Actions sends one Traditional Chinese encouragement message to Telegram every hour on the hour.
 
 The sentence library lives in `data/boost-messages.json`. Update it by instruction: tell Codex what tone, theme, or new sentences you want, then Codex edits the JSON and you push the change to GitHub.
 
@@ -35,10 +35,10 @@ If Telegram returns `Bad Request: chat not found`, check these items:
 - For groups, add the bot to the group first, send a message in the group, then use the group chat id from `getUpdates`. Group ids are often negative numbers.
 - For channels, add the bot as an admin and use the channel chat id or public `@channel_username`.
 
-The daily Telegram scheduled run uses UTC cron:
+The hourly Telegram scheduled run uses UTC cron:
 
 ```text
-0 1 * * *
+0 * * * *
 ```
 
-That is 09:00 in Asia/Taipei.
+That runs at the top of every hour.
