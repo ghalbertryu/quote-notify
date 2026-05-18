@@ -3,7 +3,7 @@ name: Daily Telegram Boost
 on:
   schedule:
     # Every hour on the hour.
-    - cron: "23 * * * *"
+    - cron: "23 1 * * *"
   workflow_dispatch:
 
 jobs:
